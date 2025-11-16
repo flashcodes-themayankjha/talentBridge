@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
-import logo from '../assets/logo.png';
 import frontimage from '../assets/frontimage.jpg';
+import { Navbar } from '@/components/Navbar';
 
 const Front = () => {
   const navigate = useNavigate();
@@ -83,35 +83,14 @@ const Front = () => {
   ];
 
   return (
-    <div className="bg-gray-50 text-gray-800">
-      <nav className="bg-white shadow-md sticky top-0 z-50">
-        <div className="container mx-auto px-6 py-3 flex justify-between items-center">
-          <div className="flex items-center">
-            <img src={logo} alt="TalentBridge Logo" className="h-10 w-10 mr-2" />
-            <span className="font-bold text-xl">TalentBridge</span>
-          </div>
-          <div className="flex items-center">
-            <button
-              className="px-4 py-2 text-gray-600 hover:text-blue-500"
-              onClick={() => navigate('/auth')}
-            >
-              Login
-            </button>
-            <button
-              className="ml-4 px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600"
-              onClick={() => navigate('/auth')}
-            >
-              Sign Up
-            </button>
-          </div>
-        </div>
-      </nav>
+    <div className="bg-background text-foreground">
+      <Navbar />
 
-      <section className="pt-20 pb-10">
+      <section className="pt-20 pb-10 bg-accent/5">
         <div className="container mx-auto px-6 flex flex-col md:flex-row items-center">
           <div className="md:w-1/2 text-center md:text-left mb-10 md:mb-0">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">Connect Talent with Opportunity</h1>
-            <p className="text-lg text-gray-600">
+            <h1 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">Connect Talent with Opportunity</h1>
+            <p className="text-lg text-muted-foreground">
               Empowering job seekers and employers through an intelligent, seamless platform that transforms the hiring experience.
             </p>
           </div>
@@ -131,21 +110,21 @@ const Front = () => {
         </div>
       </section>
 
-      <section ref={featuresRef} className={`py-20 bg-white transition-opacity duration-1000 ${featuresVisible ? 'opacity-100' : 'opacity-0'}`}>
+      <section ref={featuresRef} className={`py-20 bg-background transition-opacity duration-1000 ${featuresVisible ? 'opacity-100' : 'opacity-0'}`}>
         <div className="container mx-auto px-6">
-          <h2 className="text-3xl font-bold text-center mb-12">Features</h2>
+          <h2 className="text-3xl font-bold text-center mb-12 text-foreground">Features</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <div
                 key={index}
-                className="bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow"
+                className="bg-card border border-border p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow"
               >
-                <h3 className="text-xl font-bold mb-3">{feature.title}</h3>
+                <h3 className="text-xl font-bold mb-3 text-foreground">{feature.title}</h3>
                 <ul className="space-y-2">
                   {feature.items.map((item, i) => (
                     <li key={i} className="flex items-start">
-                      <span className="text-blue-500 mr-2">•</span>
-                      <span>{item}</span>
+                      <span className="text-primary mr-2">•</span>
+                      <span className="text-muted-foreground">{item}</span>
                     </li>
                   ))}
                 </ul>
@@ -155,16 +134,16 @@ const Front = () => {
         </div>
       </section>
 
-      <section ref={ctaRef} className={`py-20 relative overflow-hidden transition-opacity duration-1000 ${ctaVisible ? 'opacity-100' : 'opacity-0'}`}>
-        <div className="absolute top-0 left-0 w-full h-full bg-blue-500 opacity-10"></div>
+      <section ref={ctaRef} className={`py-20 relative overflow-hidden transition-opacity duration-1000 bg-accent/5 ${ctaVisible ? 'opacity-100' : 'opacity-0'}`}>
+        <div className="absolute top-0 left-0 w-full h-full bg-primary/5"></div>
         <div className="container mx-auto px-6 text-center relative">
           <div className="text-5xl mb-4">📈</div>
-          <h2 className="text-3xl font-bold mb-2">Ready to Transform Your Career?</h2>
-          <p className="text-lg text-gray-600 mb-8">
+          <h2 className="text-3xl font-bold mb-2 text-foreground">Ready to Transform Your Career?</h2>
+          <p className="text-lg text-muted-foreground mb-8">
             Join thousands of professionals finding their perfect match
           </p>
           <button 
-            className="bg-blue-500 text-white font-bold py-3 px-8 rounded-full hover:bg-blue-600 transition-colors"
+            className="bg-primary text-primary-foreground font-bold py-3 px-8 rounded-full hover:bg-primary/90 transition-colors"
             onClick={() => navigate('/auth')}
           >
             Start Your Journey

@@ -65,7 +65,7 @@ export default function Index() {
       <nav className="border-b bg-card/50 backdrop-blur-sm fixed w-full z-50">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <h1 className="text-2xl font-bold bg-hero-gradient bg-clip-text text-transparent">
-            TalentBridge
+            JobConnect
           </h1>
           <div className="flex items-center gap-4">
             <ThemeToggle />
@@ -98,7 +98,7 @@ export default function Index() {
 
         <section className="bg-accent/50 py-20">
           <div className="container mx-auto px-4">
-            <h3 className="text-3xl font-bold text-center mb-12">Why Choose TalentBridge?</h3>
+            <h3 className="text-3xl font-bold text-center mb-12">Why Choose JobConnect?</h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="bg-card p-6 rounded-lg shadow-lg hover:shadow-hero-glow transition-shadow">
                 <Users className="h-12 w-12 text-primary mb-4" />
@@ -128,7 +128,7 @@ export default function Index() {
         <section className="container mx-auto px-4 py-20 text-center">
           <h3 className="text-3xl font-bold mb-6">Ready to Get Started?</h3>
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Join thousands of professionals and companies already using TalentBridge
+            Join thousands of professionals and companies already using JobConnect
           </p>
           <Button size="lg" className="shadow-hero-glow" onClick={() => navigate("/auth")}>
             Sign Up Now
@@ -138,7 +138,7 @@ export default function Index() {
 
       <footer className="border-t bg-card py-8">
         <div className="container mx-auto px-4 text-center text-muted-foreground">
-          <p>&copy; 2024 TalentBridge. All rights reserved.</p>
+          <p>&copy; 2024 JobConnect. All rights reserved.</p>
         </div>
       </footer>
     </div>

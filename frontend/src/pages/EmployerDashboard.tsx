@@ -48,7 +48,7 @@ export default function EmployerDashboard() {
     <div className="min-h-screen bg-background">
       <nav className="border-b bg-card">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-          <h1 className="text-2xl font-bold text-primary">TalentBridge</h1>
+          <h1 className="text-2xl font-bold text-primary">JobConnect</h1>
           <div className="flex items-center gap-4">
             <ThemeToggle />
             <Button variant="ghost" onClick={handleSignOut}>
